@@ -58,6 +58,28 @@ public class Author {
         return books;
     }
 
+    @Override
+    public String toString() {
+        return "Author{" +
+                "ind=" + ind +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", books=" + books +
+                '}';
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
+        Author author = (Author) o;
+
+        return ind != null ? ind.equals(author.ind) : author.ind == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return ind != null ? ind.hashCode() : 0;
+    }
 }
