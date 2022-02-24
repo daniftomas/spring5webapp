@@ -39,7 +39,7 @@ public class BootStrapData implements CommandLineRunner {
 
         //add an author and then a book, save them both
         Author eric = new Author("Eric", "Evans");
-        Book ddd = new Book("iuasudblka", "6712313");
+        Book ddd = new Book("Bani bio", "6712313");
         eric.getBooks().add(ddd);
         ddd.getAuthors().add(eric);
 
